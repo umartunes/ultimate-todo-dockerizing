@@ -8,7 +8,6 @@ import { todosRouter } from './routes/routes-todos'
 //Importing MiddleWares
 import responseTemplate from './middlewares/response-template'
 
-//Comment Test
 //TypeScript class
 class App {
 
@@ -39,11 +38,11 @@ class App {
             next();
         });
 
+        //Static Files
+        this.server.use(express.static('./build'))
+
         //setting routes
         this.todoRoute.routes(this.server);
-        this.server.get('/', (req: Request, res: Response) => {
-            res.status(200).send("Root / Working...");
-        })
 
         //Error Control
         this.server.use(function (err, req, res, next) {
