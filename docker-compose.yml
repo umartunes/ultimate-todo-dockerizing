@@ -6,7 +6,7 @@ services:
         image : umartunes/todo-test:alpine
         restart: always
         ports:
-        - '9000:5000'
+        - '5000:5000'
         links:
         - mongo
 
