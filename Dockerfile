@@ -18,4 +18,4 @@ RUN npm install
 # Allows port 5000 to be publicly available
 EXPOSE 5000
 
-ENTRYPOINT ["npm", "start"]
+CMD ["npm", "start"]
